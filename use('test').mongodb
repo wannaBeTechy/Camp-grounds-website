@@ -1,0 +1,3 @@
+use('test')
+
+db.campgrounds.insert({'name':'view','image':'https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&h=350'})

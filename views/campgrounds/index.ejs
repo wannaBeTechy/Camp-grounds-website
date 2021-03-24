@@ -1,0 +1,37 @@
+<%-include ("../partials/hearder") %>
+
+<h4> <%= currentUser %> </h4>
+
+<div class="container">
+	<header class="jumbotron">
+	   <div class="container">
+	     <h1>Welcome to YelpCamp!</h1>
+	     <p> View the best clicks of yelpcamp</p>
+	     <p>
+	     <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add new Campground</a>
+	     </p>
+	   </div>
+	</header>
+	
+	
+	<div class="row" style="display:flex; flex-wrap:wrap;" >
+		
+		<% campgrounds.forEach(function (campground) { %>
+				<div class="col-sm-6 col-md-4">
+					
+					<div class="thumbnail">
+						<img src="  <%= campground.image %>  ">
+						
+						<div class="caption">
+							<h4>  <%= campground.name %> </h4>
+							<p>
+								<a href="/campgrounds/<%= campground._id %>" class="btn btn-info">More info</a>
+							</p>
+						</div>
+					</div>
+		</div>
+		<% }); %>
+	</div>
+</div>
+	
+<%-include ("../partials/footer") %>
